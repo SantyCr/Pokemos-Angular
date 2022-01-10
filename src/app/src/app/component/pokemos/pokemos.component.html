@@ -1,0 +1,20 @@
+<section class="flex-container">
+    <div *ngFor="let nombrePokemons of nombrePokemons" >
+        <div class="modal_container">
+            <a href="#miModal"><img (click)="poke(nombrePokemons.url)" href="#miModal"  alt="Pokemos" class="imagen-pokemons"
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" /></a>
+            <a href="#miModal" class="name-pokemon" >{{nombrePokemons.name}}</a>
+            <p class="type-pokemon">{{pokemon.type}} </p>
+        </div>
+    </div>
+</section>
+
+<section >
+    <div id="miModal" class="modal">
+        <div class="modal-contenido" >
+            <a href="#">X</a>
+            <h2>HABILIDADES</h2>
+            <p>{{pokemon}}</p>
+        </div>
+    </div>
+</section>
