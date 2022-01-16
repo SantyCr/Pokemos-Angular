@@ -22,15 +22,11 @@ export class PokemosComponent implements OnInit {
   public pokemon: any = [];
   public pokemonw: any = [1,2];
   public urlPokemons: any = [1,2];
-  
-
-
-
-
 
   ngOnInit(): void {
    this.pokemonsService.pokemosGet().subscribe((resp: Pokemos) =>{
       this.nombrePokemons = resp.results
+      console.log(resp.results)
    });
 
    console.log(Array(this.pokemon));
